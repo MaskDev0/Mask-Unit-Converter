@@ -10,9 +10,10 @@ const err = document.getElementById("error")
 1 liter = 0.264 gallon
 1 kilogram = 2.204 pound
 */
-let metricNo = Number(inputEl.value)
-let rareGex = /^[A-Za-z]+$/;
+
 function metreFeet() {
+  let metricNo = Number(inputEl.value)
+  let rareGex = /^[A-Za-z]+$/;
   let feetCalc = (metricNo * 3.281).toFixed(3)
   let metreCalc = (metricNo / 3.281).toFixed(3)
   if (inputEl.value.match(rareGex) || metricNo === null || metricNo === 0) {
@@ -24,6 +25,8 @@ function metreFeet() {
 
 }
 function litreGallon() {
+  let metricNo = Number(inputEl.value)
+  let rareGex = /^[A-Za-z]+$/;
   let litreCalc = (metricNo * 0.264).toFixed(3)
   let gallonCalc = (metricNo / 0.264).toFixed(3)
   if (inputEl.value.match(rareGex) || metricNo === null || metricNo === 0) {
@@ -34,9 +37,10 @@ function litreGallon() {
   }
 }
 function kiloPounds() {
+  let metricNo = Number(inputEl.value)
+  let rareGex = /^[A-Za-z]+$/;
   let massCalc = (metricNo * 2.204).toFixed(3)
   let poundCalc = (metricNo / 2.204).toFixed(3)
-  let rareGex = /^[A-Za-z]+$/;
   if (inputEl.value.match(rareGex) || metricNo === null || metricNo === 0) {
     error.textContent = "Put the correct value Please"
   } else {
